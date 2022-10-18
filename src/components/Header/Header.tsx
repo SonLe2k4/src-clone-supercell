@@ -32,6 +32,8 @@ const Header = (props: Props) => {
         </header>
         <div className={cx("menu-mobile-wrapper", isOpenMenuMobile && "open")}>
           <Menu mobile={true} className={cx("menu-mobile")} />
+          <SearchBtn className={cx("search-btn-mobile")} text='Search' />
+          <SupercellId className={cx("supercell-id-mobile")}/>
         </div>
       </div>
     </>

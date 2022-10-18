@@ -1,0 +1,135 @@
+.wrapper-menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  &.menu-mobile {
+    background-color: #000;
+    > .menu {
+      flex-direction: column;
+      width: 100%;
+      > li {
+        &:hover > .sub {
+          height: 0;
+        }
+
+        &:nth-child(1).open-sub {
+          > .sub {
+            height: 266.25px;
+          }
+        }
+        &:nth-child(2).open-sub {
+          > .sub {
+            height: 319.5px;
+          }
+        }
+        &:nth-child(3).open-sub {
+          > .sub {
+            height: 53.25px;
+          }
+        }
+        &:nth-child(4).open-sub {
+          > .sub {
+            height: 159.75px;
+          }
+        }
+
+        position: relative;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &.open-sub > a {
+          color: #fff;
+        }
+        &.open-sub > a .arrow {
+          transform: rotate(0deg);
+        }
+      }
+      a {
+        width: 100%;
+        padding-left: 20px;
+        font-size: 25px;
+        .arrow {
+          font-size: 15px;
+          margin-left: 3px;
+          -webkit-transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .sub {
+      flex-direction: column;
+      position: relative !important;
+      width: 100% !important;
+      left: 0 !important;
+      > li {
+        width: 100%;
+        position: relative;
+        > a {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  > .menu {
+    position: relative;
+  }
+  > .menu,
+  .sub {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    > li {
+      margin-left: 40px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      > a {
+        display: block;
+        color: #808080;
+        padding: 6px 2px;
+        outline: none;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+
+        @media (max-width: 1280px) {
+          font-size: 14px;
+        }
+        font-size: 15px;
+        &:hover {
+          color: #fff;
+        }
+      }
+      &:hover {
+        > .sub {
+          height: 100%;
+        }
+      }
+      .sub {
+        -webkit-transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.75);
+        top: 100%;
+        overflow: hidden;
+        left: -78px;
+        height: 0;
+        @media (max-width: 1680px) {
+          width: 1200px;
+        }
+
+        @media (max-width: 1280px) {
+          left: -68px;
+          width: 1024px;
+        }
+        width: 1600px;
+      }
+    }
+  }
+}

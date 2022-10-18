@@ -1,0 +1,38 @@
+.list-SupercellId {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  > li {
+    margin-right: 27px;
+    > a {
+      display: block;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      --size: 28px;
+      @media (max-width: 1280px) {
+        --size: 26px;
+      }
+      width: var(--size);
+      height: var(--size);
+    }
+    &:nth-child(1) > a {
+      &:hover {
+        background-image: url("../../../../access/image/supercell-id/supercell_creators_white.svg");
+      }
+      background-image: url("../../../../access/image/supercell-id/supercell_creators_grey.svg");
+    }
+    &:nth-child(2) > a {
+      &:hover {
+        background-image: url("../../../../access/image/supercell-id/supercell_make_white.svg");
+      }
+      background-image: url("../../../../access/image/supercell-id/supercell_make_grey.svg");
+    }
+    &:nth-child(3) > a {
+      &:hover {
+        background-image: url("../../../../access/image/supercell-id/supercell_id_white.svg");
+      }
+      background-image: url("../../../../access/image/supercell-id/supercell_id_grey.svg");
+    }
+  }
+}

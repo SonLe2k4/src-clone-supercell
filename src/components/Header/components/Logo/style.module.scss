@@ -1,0 +1,24 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  --size: 54px;
+  @media (max-width: 1280px) {
+    --size: 44px;
+  }
+
+  padding: calc((78px - 54px) / 2);
+
+  background-color: #000;
+  > a {
+    display: block;
+
+    width: var(--size);
+    height: var(--size);
+
+    background: url(../../../../access/image/logo_supercell@2x.png) no-repeat;
+    background-position: 100%;
+    background-size: 100% auto;
+  }
+}

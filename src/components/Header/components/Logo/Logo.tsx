@@ -1,13 +1,17 @@
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
+import RouteActiveStore from "../../../../routes/RouteActiveStore";
 import style from "./style.module.scss";
 const cx = classNames.bind(style);
-type Props = {};
+type Props = {
+  className?: string;
+};
 
 const Logo = (props: Props) => {
-  return (
-    <div className={cx("logo")}>
-      <Link to={"/"}></Link>
+    const { setActiveRoute } = RouteActiveStore();
+    return (
+    <div className={cx("logo", props.className)}>
+      <Link to={"/"} onClick={() => setActiveRoute('/')}></Link>
     </div>
   );
 };

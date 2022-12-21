@@ -1,0 +1,81 @@
+.wrapper {
+    background-color: #f3f3f3;
+    @media (min-width: 791px) {
+        display: none;
+    }
+    .slider-img {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none;
+        ul {
+            margin: 0 10%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 2em;
+            li {
+                padding-bottom: 0;
+                img {
+                    max-height: 30vh;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    > ul {
+        padding-top: 90px;
+        > li {
+            padding-bottom: 90px;
+            .info {
+                margin: 0 auto;
+                margin-bottom: 54px;
+                width: 80%;
+                .title {
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: #2d85f3;
+                }
+                .position {
+                    margin-bottom: 28px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                .title,
+                .position {
+                    width: 100%;
+                    text-align: center;
+                }
+                p {
+                    margin: 0 0 30px;
+                    line-height: 1.56;
+                    padding-bottom: 0;
+                }
+                a {
+                    position: relative;
+                    display: block;
+                    font-family: Helvetica, Arial, sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: #2d85f3;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    &::after {
+                        position: absolute;
+                        bottom: 2px;
+                        content: "»";
+                        -webkit-margin-start: 6px;
+                        margin-inline-start: 6px;
+                    }
+                }
+            }
+        }
+    }
+}

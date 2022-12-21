@@ -2,40 +2,212 @@
 @import url("./classes.module.scss");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
-  text-decoration: none;
-  color: #000;
+    text-decoration: none;
+    color: #000;
 }
 
 html {
-  -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 html,
 body {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    src: url("./font/supercell-magic.ttf");
+    font-family: "Supercell-font";
 }
 
 body {
-  font-size: 19px;
-  line-height: 1.65;
-  color: #000;
-  font-weight: 400;
-  font-family: "Roboto", sans-serif;
+    font-size: 19px;
+    line-height: 1.65;
+    color: #000;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    @media (max-width: 1680px) {
+        font-size: 18px;
+    }
+    @media (max-width: 1280px) {
+        font-size: 14px;
+    }
+}
+
+body h2,
+html h2 {
+    font-size: 34px;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    text-align: center;
+    margin-bottom: 21px;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 p {
-  margin: 0;
-  padding: 0 0 1.25em 0;
+    margin: 0;
+    padding: 0 0 1.25em 0;
+}
+
+h1,
+h2,
+h3 {
+    @media (max-width: 767px) {
+        font-size: 32px;
+        line-height: 1.1em;
+    }
+    @media (max-width: 1024px) {
+        font-size: 22px;
+    }
+    @media (max-width: 1280px) {
+        font-size: 26px;
+    }
+    @media (max-width: 1680px) {
+        font-size: 34px;
+    }
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    color: #000000;
+}
+
+h4,
+h5 {
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: initial;
+    margin: 0.75em 0 0.75em 0;
+    padding: 0;
+    @media (max-width: 1680px) {
+        font-size: 20px;
+    }
+    @media (max-width: 1280px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 18px;
+    }
+}
+
+.shrink_web {
+    max-width: 100%;
+    @media (max-width: 1680px) {
+        width: 1200px;
+    }
+    @media (max-width: 1280px) {
+        width: 1024px;
+    }
+
+    width: 1600px;
+}
+
+.ml_default_size {
+    margin-left: calc((100vw - 1600px) / 2);
+    @media (max-width: 1680px) {
+        margin-left: calc((100vw - 1200px) / 2);
+    }
+    @media (max-width: 1280px) {
+        margin-left: calc((100vw - 1024px) / 2);
+    }
+}
+
+.mr_default_size {
+    margin-right: calc((100vw - 1600px) / 2);
+    @media (max-width: 1680px) {
+        margin-right: calc((100vw - 1200px) / 2);
+    }
+    @media (max-width: 1280px) {
+        margin-right: calc((100vw - 768px) / 2);
+    }
+}
+
+.shrink_mobile {
+    // overflow: hidden;
+    max-width: 100%;
+    @media (max-width: 1024px) {
+        max-width: 768px;
+        width: 100%;
+        margin-left: 44px;
+        margin-right: 44px;
+    }
+}
+
+.over-hidden {
+    overflow: hidden;
+}
+
+.no-m {
+    margin: 0 !important;
+}
+
+.medium {
+    width: 176px;
+    @media (max-width: 1680px) {
+        width: 120px;
+    }
+    @media (max-width: 1280px) {
+        width: 112px;
+    }
+    @media (max-width: 1024px) {
+        width: 88px;
+    }
+    @media (max-width: 767px) {
+        width: 176px;
+    }
+}
+
+.fs {
+    @media (max-width: 1280px) {
+        font-size: 12px;
+    }
+    @media (max-width: 767px) {
+        font-size: 13px;
+    }
+}
+
+.h3 {
+    @media (max-width: 1680px) {
+        font-size: 20px;
+    }
+    @media (max-width: 1280px) {
+        font-size: 16px;
+    }
+    @media (max-width: 1024px) {
+        font-size: 15px;
+    }
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.cl-000 {
+    color: #000;
+}
+
+.tal {
+    text-align: left;
+}
+
+.color-fff {
+    color: #fff;
 }

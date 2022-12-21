@@ -1,0 +1,57 @@
+.wrapper {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .container {
+        .content {
+            margin: 0 auto;
+            width: 770px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 7em 0 6em 0;
+
+            h2 {
+                color: #fff;
+                text-align: center;
+                font-family: "Supercell-font";
+            }
+            p {
+                margin-top: 20px;
+            }
+            a {
+                color: #2d85f3;
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+            @media (max-width: 1680px) {
+                width: 650px;
+                padding: 5em 0 4.25em 0;
+            }
+            @media (max-width: 1280px) {
+                width: 502px;
+                padding: 5em 0 4.25em 0;
+            }
+            @media (max-width: 1024px) {
+                width: 61%;
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+                padding: 4em 0 3.25em 0;
+            }
+        }
+        .location {
+            height: 448px;
+            background: #000 url("../../../../access/image/careers/office/bg_global.png") no-repeat right top;
+            background-size: 100% auto;
+            position: relative;
+            @media (max-width: 1024px) {
+                height: 380px;
+            }
+        }
+    }
+}

@@ -12,10 +12,11 @@ type Props = {};
 
 const Header = (props: Props) => {
   const [isOpenMenuMobile, setIsOpenMenuMobile] = useState<boolean>(false);
+  
   return (
     <>
-      <header className={cx("wrapper-header", "web")}>
-        <Logo />
+      <header className={cx("wrapper-header", "web", 'shrink_web')}>
+        <Logo className={cx("logo-web")} />
         <Menu className={cx("mr-auto")} />
         <SupercellId className={cx("ml-auto", "SupercellId")} />
         <SearchBtn />

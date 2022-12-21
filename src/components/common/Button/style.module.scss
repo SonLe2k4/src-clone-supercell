@@ -1,0 +1,72 @@
+.reset-btn {
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.btn {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    &.disabled {
+        cursor: default !important;
+        background-color: #eee !important;
+        color: #fff !important;
+    }
+
+    @media (max-width: 1680px) {
+        font-size: 13px;
+        padding: 15px 18px;
+    }
+    @media (max-width: 1280px) {
+        font-size: 12px;
+    }
+    @media (max-width: 767px) {
+        font-size: 14px;
+        padding: 16px 24px;
+    }
+    padding: 18px 20px;
+
+    transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    -webkit-transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
+        &.left {
+            padding-right: 10px;
+        }
+        &.right {
+            padding-left: 10px;
+        }
+    }
+}
+.primary {
+    background-color: #2d85f3;
+    color: #fff;
+    &:hover {
+        background-color: #2979de;
+    }
+}
+.simple {
+    background-color: #fff;
+    color: #000;
+}
+.rounded {
+    border-radius: 500px;
+}
+.rounded2 {
+    border-radius: 8px;
+}

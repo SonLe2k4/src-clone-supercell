@@ -1,0 +1,14 @@
+.wrapper-footer {
+    background-color: #000;
+    width: 100%;
+    .footer {
+        @media (max-width: 768px) {
+            padding: 0 10px;
+            padding-bottom: 20px;
+        }
+        margin: 0 auto;
+        
+        padding-bottom: 10em;
+        color: #fff;
+    }
+}

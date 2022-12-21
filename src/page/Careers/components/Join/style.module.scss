@@ -1,0 +1,13 @@
+.join-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 6em;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

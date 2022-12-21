@@ -1,0 +1,163 @@
+.wrapper-article {
+    width: 100%;
+    .article {
+        width: 100%;
+        background-size: 100% auto !important;
+        background-position: top left !important;
+
+        @media (max-width: 1024px) {
+            background-size: cover !important;
+        }
+        @media (max-width: 767px) {
+            background-size: cover !important;
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            &.reverse {
+                flex-direction: row-reverse !important;
+                @media (max-width: 767px) {
+                    flex-direction: column !important;
+                }
+            }
+            &.reverse-mobile {
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                }
+            }
+
+            color: #fff;
+
+            width: 1600px;
+            @media (max-width: 1680px) {
+                width: 1200px;
+                padding: 0 4.25em;
+                padding-top: 7em;
+            }
+            @media (max-width: 1280px) {
+                padding-top: 7em;
+
+                padding-left: 66px;
+                padding-right: 66px;
+                width: 1024px;
+            }
+            @media (max-width: 1024px) {
+                width: 100%;
+                padding: 4em 42px;
+                padding-bottom: 0;
+                max-width: 856px;
+            }
+            @media (max-width: 767px) {
+                padding: 4em 20px;
+                padding-bottom: 0;
+                width: 100%;
+                max-width: 100%;
+                flex-direction: column;
+            }
+            padding-top: 7em;
+
+            .item {
+                flex: 1;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+
+                &.thumb {
+                    img {
+                        width: 66%;
+                        height: auto;
+                        @media (max-width: 1024px) {
+                            width: 72%;
+                        }
+                        @media (max-width: 767px) {
+                            width: 74%;
+                        }
+                    }
+                    @media (max-width: 767px) {
+                        height: 270px;
+                        margin-top: 5em;
+                        align-items: flex-start;
+                    }
+                }
+                &.info {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    height: 100%;
+
+                    padding-right: 5%;
+
+                    &.no-thumb {
+                        @media (max-width: 1024px) {
+                            padding-bottom: 46px;
+                        }
+                        @media (max-width: 1680px) {
+                            padding-bottom: 90px;
+                        }
+                        padding-bottom: 130px;
+                    }
+                    .button {
+                        border-radius: 8px;
+
+                        @media (max-width: 768px) {
+                            margin: 0 auto;
+                        }
+                    }
+                    @media (max-width: 767px) {
+                        padding-top: 0;
+                    }
+                    @media (max-width: 1024px) {
+                        padding-top: 46px;
+                    }
+                    @media (max-width: 1680px) {
+                        padding-top: 90px;
+                    }
+                    padding-top: 130px;
+
+                    > h3 {
+                        color: #fff;
+                        font-weight: 800;
+                        letter-spacing: 1px;
+                        padding-bottom: 0.5em;
+                        width: 100%;
+                        font-family: "Supercell-font";
+
+                        @media (max-width: 768px) {
+                            text-align: center;
+                        }
+                    }
+
+                    > p {
+                        font-size: 22px;
+                        @media (max-width: 1680px) {
+                            font-size: 20px;
+                        }
+                        @media (max-width: 1280px) {
+                            font-size: 17px;
+                        }
+                        @media (max-width: 1024px) {
+                            font-size: 15px;
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 16px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

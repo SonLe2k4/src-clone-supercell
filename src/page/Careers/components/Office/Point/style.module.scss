@@ -1,0 +1,53 @@
+:root {
+    --top: ;
+    --left: ;
+
+    --top-mobile: false;
+    --left-mobile: ;
+}
+
+
+.point {
+    user-select: none;
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+
+    @media (max-width: 1024px) {
+        top: var(--top-mobile);
+        left: var(--left-mobile);    
+        
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+
+        background-color: #2d85f3;
+        box-shadow: 0px 0px 10px 3px rgb(45 133 243 / 50%);
+
+        bottom: 0;
+    }
+
+    strong {
+        color: #2d85f3;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 12px;
+        color: #fff;
+    }
+}

@@ -1,0 +1,19 @@
+.home-page {
+    @media (max-width: 767px) {
+        margin-top: 68px;
+    }
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .art-next-step {
+        @media (max-width: 767px) {
+            height: 80vh;
+        }
+    }
+    .info-next-step {
+        @media (max-width: 767px) {
+            transform: translateY(-11vh);
+        }
+    }
+}

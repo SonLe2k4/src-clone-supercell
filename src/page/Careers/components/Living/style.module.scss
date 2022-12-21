@@ -1,0 +1,48 @@
+.living-wrapper {
+    background-color: #f2f2f2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        padding: 100px 0;
+        .item {
+            &:nth-child(1) {
+                background-image: url("../../../../access/image/careers/living/supercellian.jpg");
+                @media (max-width: 1024px) {
+                    margin-bottom: 40px;
+                }
+            }
+            &:nth-child(2) {
+                background-image: url("../../../../access/image/careers/living/helsinki.jpg");
+            }
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 48.1%;
+            min-height: 276px;
+            padding: 50px 40px;
+            color: #fff;
+            
+            h4 {
+                font-weight: bold;
+                text-transform: uppercase;
+
+            }
+
+            a {
+                color: #2d85f3;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 14px;
+                display: block;
+            }
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+        }
+    }
+}

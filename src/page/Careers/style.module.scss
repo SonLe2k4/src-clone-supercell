@@ -1,0 +1,41 @@
+.careers-page {
+    @media (max-width: 767px) {
+        margin-top: 68px;
+    }
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .content-why {
+        padding-top: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        align-items: flex-end !important;
+        @media (max-width: 1024px) {
+            padding: 0 15px !important;
+        }
+    }
+    .content-info-why {
+        padding-bottom: 73px;
+        padding-right: 0 !important;
+    }
+    .thumb-why {
+        height: 516px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 90px;
+        @media (max-width: 768px) {
+            margin-top: 0 !important;
+            display: none !important;
+        }
+        > img {
+            position: absolute;
+            top: 10px;
+            width: 100% !important;
+        }
+    }
+    .content-btn-why {
+        padding: 0;
+        color: rgb(45, 133, 243);
+    }
+}

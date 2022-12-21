@@ -1,0 +1,86 @@
+.wrapper {
+    padding: 95px 0 62px;
+    background-color: #f3f3f3;
+    .heading {
+        font-weight: bold;
+        text-transform: uppercase;
+        @media (min-width: 1281px) {
+            font-size: 34px;
+        }
+        @media (min-width: 1050px) and (max-width: 1280px) {
+            font-size: 26px;
+        }
+        margin-bottom: 0;
+        padding-bottom: 24px;
+    }
+    .list {
+        width: 100%;
+        overflow-x: scroll;
+        @media (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    ul {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3em;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li {
+            width: 500px;
+            @media (max-width: 768px) {
+                width: 90%;
+            }
+            .thumb {
+                height: 390px;
+                width: 100%;
+                @media (min-width: 790px) and (max-width: 1281px) {
+                    height: 284px;
+                }
+                @media (max-width: 789px) {
+                    height: auto;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .info {
+                margin-top: 16px;
+                .title {
+                    display: flex;
+                    .number {
+                        --size: 25px;
+                        width: var(--size);
+                        height: var(--size);
+                        background-color: #000;
+                        color: #fff;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: bold;
+                        margin: 0 18px;
+                        margin-top: 2px;
+                    }
+                    span {
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    margin-bottom: 1.5em;
+                }
+                > p {
+                    margin: 0 18px 50px;
+                }
+            }
+        }
+    }
+}

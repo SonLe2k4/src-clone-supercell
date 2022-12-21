@@ -1,0 +1,105 @@
+.social-media-menu-wrapper {
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .down-load > div,
+    .link {
+        flex: 1;
+        width: 50%;
+        height: 130px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        border-bottom: 1px solid #333;
+        padding-bottom: 30px;
+
+        h5 {
+            font-size: 12px;
+        }
+    }
+
+    .link, .down-load {
+        width: 100%;
+    }
+    .link {
+        h5 {
+            font-size: 12px;
+        }
+        > ul {
+            display: flex;
+            align-items: center;
+            li {
+                &:first-child {
+                    margin-left: 0;
+                }
+                margin-left: 18px;
+                @media (max-width: 767px) {
+                    margin-left: 16px;
+                }
+                @media (max-width: 1280px) {
+                    margin-left: 14px;
+                }
+                a {
+                    background-repeat: no-repeat;
+                    width: 24px;
+                    height: 25px;
+                    display: block;
+                    background-position: top center;
+                    background-size: auto 23px;
+                }
+            }
+        }
+    }
+    .down-load {
+        h5 {
+            font-size: 12px;
+            margin-top: 20px;
+
+            margin: 0;
+            
+            display: none;
+            
+            @media (max-width: 768px) {
+                margin-top: 10px;
+                display: block;
+            }
+        }
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 130px;
+
+        > div {
+            @media (max-width: 768px) {
+                justify-content: flex-start;
+            }
+            width: 100%;
+            height: auto;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-end;
+            a {
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                margin-right: 10px;
+                display: block;
+    
+                width: 147px;
+                height: 50px;
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:nth-child(2) {
+                    width: 166px;
+                }
+            }
+        }
+
+    }
+}

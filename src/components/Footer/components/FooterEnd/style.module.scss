@@ -1,0 +1,22 @@
+.footer-end-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > address {
+        span {
+            display: block;
+            color: #666;
+            font-size: 13px;
+            font-style: normal;
+        }
+    }
+    .logo {
+        a {
+            display: block;
+            background-image: url("../../../../access/image/logo_supercell@2x.png");
+            width: 60px;
+            height: 50px;
+            background-size: 100% 100%;
+        }
+    }
+}

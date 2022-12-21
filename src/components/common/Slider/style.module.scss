@@ -1,0 +1,187 @@
+.wrapper-all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+    position: relative;
+    &.fullScreen {
+        @media (max-width: 1024px) {
+            width: 768px;
+        }
+        .control {
+            z-index: 1;
+            position: absolute;
+            bottom: 10%;
+            @media (max-width: 1280px) {
+                bottom: 12%;
+            }
+
+            @media (max-width: 1024px) {
+                bottom: 15%;
+            }
+        }
+        .wrapper {
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #ccc;
+            @media (max-width: 1280px) {
+                height: 570px;
+            }
+            @media (max-width: 1024px) {
+                height: 420px;
+            }
+            > ul {
+                height: 100%;
+                padding: 0;
+                > li {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    &.full-screen-3,
+                    &.full-screen-2 {
+                        max-width: none;
+                    }
+                    .wrapper-cart {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &.typeFullScreen-3 {
+        width: 100%;
+        .wrapper {
+            height: auto;
+        }
+    }
+    .control {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        &.type-2 {
+            > li.active {
+                background-color: #000;
+            }
+        }
+        > li {
+            --size: 12px;
+            width: var(--size);
+            height: var(--size);
+            margin: 0 10px;
+            background-color: #c8c7c7;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover {
+                background-color: rgb(155 155 155);
+            }
+            &.active {
+                background-color: rgb(44 130 238);
+            }
+        }
+    }
+    .btn {
+        position: absolute;
+        z-index: 2;
+
+        --size-icon: 24px;
+        --size: 65px;
+
+        @media (max-width: 790px) {
+            --size: 35px;
+            --size-icon: 14px;
+        }
+
+        width: var(--size);
+        height: var(--size);
+
+        background-color: #191919;
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            color: #fff;
+            display: block;
+            font-weight: bold;
+            font-size: var(--size-icon);
+        }
+
+        &.type-3,
+        &.type-2 {
+            svg {
+                color: #000;
+            }
+            background-color: #ccc;
+        }
+
+        &.prev {
+            left: 0;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        &.next {
+            right: 0;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+    }
+}
+
+.wrapper {
+    padding: 3em 0;
+
+    --item-count: 1;
+
+    overflow-x: hidden;
+    @media (max-width: 1024px) {
+        padding-bottom: 0.75em;
+    }
+    @media (max-width: 767px) {
+        padding-top: 0;
+        padding-bottom: 0.5em;
+    }
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    > ul {
+        width: calc(100% * var(--item-count));
+        transition: all 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.06);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @media (max-width: 768px) {
+            padding: 40px 0;
+        }
+        > li {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            position: relative;
+            @media (max-width: 768px) {
+                width: 100%;
+                padding: 0 10px;
+                justify-content: center;
+            }
+            @media (max-width: 1024px) {
+                width: 1024px;
+            }
+
+            .wrapper-cart {
+                position: absolute;
+                width: 100vw;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+    }
+}

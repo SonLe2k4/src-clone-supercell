@@ -1,0 +1,99 @@
+.hero-heading {
+    z-index: 4;
+
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-25%);
+    font-size: 18px;
+    max-width: 324px;
+    &.logo {
+        top: 20%;
+        @media (max-width: 768px) {
+            top: 50%;
+            > .logo {
+                width: 45%;
+                min-width: 200px;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        transform: translateY(-140%);
+    }
+
+    @media (min-width: 768px) {
+        font-size: 16px;
+        margin-top: 22px;
+        width: 390px;
+        max-width: none;
+    }
+    @media (min-width: 1025px) {
+        margin-top: 1em;
+        width: 432px;
+    }
+    @media (min-width: 1281px) {
+        font-size: 20px;
+        width: 508px;
+    }
+    @media (min-width: 1681px) {
+        font-size: 26px;
+        width: 590px;
+    }
+    .logo {
+        width: 40%;
+        margin: auto;
+        > img {
+            width: 100%;
+        }
+    }
+    h2 {
+        font-weight: 900;
+        color: #000;
+        @media (min-width: 1025px) {
+            font-size: 36px;
+        }
+        @media (min-width: 1281px) {
+            font-size: 40px;
+        }
+        font-family: "Supercell-font";
+    }
+    p {
+        line-height: 1.5;
+        > strong {
+            font-weight: normal;
+
+            @media (min-width: 768px) {
+                font-size: 16px;
+            }
+            @media (min-width: 1025px) {
+                line-height: 1.75;
+            }
+            @media (min-width: 1281px) {
+                font-size: 20px;
+            }
+            @media (min-width: 1680px) {
+                font-size: 26px;
+            }
+        }
+        @media (min-width: 1025px) {
+            line-height: 1.75;
+        }
+    }
+    .btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        @media (min-width: 1281px) {
+            bottom: -140px;
+        }
+        @media (min-width: 1025px) {
+            // bottom: -150px;
+        }
+        bottom: -70px;
+        margin: 0 auto;
+    }
+    .icon-btn-hero {
+        margin-right: 6px;
+    }
+}

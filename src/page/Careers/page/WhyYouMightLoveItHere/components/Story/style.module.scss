@@ -1,0 +1,54 @@
+
+.wrapper-story {
+    padding-bottom: 0;
+
+    .ul-slider-story {
+        background-color: #000;
+    }
+
+    .control {
+        @media (max-width: 1024px) {
+            bottom: 10% !important;
+        }
+    }
+    .ul-story {
+        padding: 0 0 1.25em;
+        li {
+            text-align: center;
+        }
+    }
+    .i-story {
+        padding: 0 0 1.25em;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .btn-read-story {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        button {
+            color: rgb(44 130 238);
+            outline: none;
+            background-color: transparent;
+            border: none;
+            padding: 1px 6px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+    .animate {
+        transform: scaleX(0);
+        padding-bottom: 0;
+        transform-origin: left;
+        overflow: hidden;
+        transition: ease 0.5s;
+        &.hide {
+            font-size: 0;
+        }
+        &.show {
+            transform: scale(1);
+            padding-bottom: 1.25em;
+        }
+    }
+}

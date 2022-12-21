@@ -1,0 +1,58 @@
+.wrapper-interested {
+    width: 100%;
+    background-image: linear-gradient(180deg, #245fc6 1%, #2887f0);
+
+    .container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .left {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px 0 46px 0;
+            h2 {
+                text-align: center;
+                color: #fff;
+                font-weight: bold;
+                letter-spacing: 1px;
+                margin-bottom: 18px;
+                line-height: 1.6;
+                @media (max-width: 1280px) {
+                    font-size: 28px;
+                }
+            }
+            .btn-interested {
+                padding: 11px 21px;
+            }
+        }
+        .right {
+            position: relative;
+            @media (max-width: 1048px) {
+                width: 200px !important;
+                height: 182px;
+            }
+            img {
+                height: 243px;
+                display: block;
+                position: absolute;
+                width: 100%;
+                @media (max-width: 1048px) {
+                    height: 100%;
+                }
+                object-fit: contain;
+                right: 0;
+                bottom: -1px;
+            }
+        }
+        .left,
+        .right {
+            width: 50%;
+            @media (max-width: 1048px) {
+                width: 100%;
+            }
+        }
+    }
+}
